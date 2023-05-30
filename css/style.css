@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
+
+* {
+  font-family: Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+}
+
+h1 {
+    color: #F0A83E;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: #1CD1B0;
+    color: #000000;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 17.58px;
+    height: 38px;
+}
+
+header span {
+    margin: 10px 0 0 27px;
+}
+
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  height: 101px;
+  left: calc(50% - 1024px/2);
+  background: #00669F;
+  display: flex;
+  align-items: center;
+  -webkit-box-shadow: 0px 8px 28px -3px rgba(0,0,0,0.58);
+  -moz-box-shadow: 0px 8px 28px -3px rgba(0,0,0,0.58);
+  box-shadow: 0px 8px 28px -3px rgba(0,0,0,0.58);
+}
+
+.sticky-header p {
+  color: #000000;
+  margin-left: 28px;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 47px;
+  letter-spacing: 0em;
+}
+
+/*+++++++++MAIN++++++++++++++*/
+#backround1{
+  background-image: url("../img/portada1.png");
+  background-size: cover;
+}
+
+#backround2{
+  background-image: url("../img/portada2.png");
+  background-size: cover;
+}
+
+#backround3{
+  background-image: url("../img/portada3.png");
+  background-size: cover;
+}
+
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.cards-container{
+  margin-top: 170px;
+  display: flex;
+  justify-content: space-evenly;
+  width: 90%;
+  height: 530px;
+  position: relative;
+}
+
+.card {
+  width: 300px;
+  height: auto;
+  background: #F3F3F3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+.card img {
+  position: absolute;
+  border-radius: 50%;
+  margin-top: 112px;
+  margin-left: 27.2%;
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+  z-index: 9;
+}
+
+.card i {
+  position: absolute;
+  font-size: 25px;
+  margin: 9px 0 0 9px;
+}
+
+.about-hero {
+  width: 100%;
+  height: 336px;
+  top: 193px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+}
+
+.about-hero > h3 {
+  margin-top: 55px;
+}
+
+.about-hero > span {
+  margin-top: 90px;
+  position: absolute;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #333333;
+  width: 100%;
+  padding: 5%;
+}
+
+.about-hero button {
+  position: absolute;
+  width: 128.78px;
+  height: 48.52px;
+  bottom: 30px;
+  background: #00669F;
+}
+
+.backround {
+  position: absolute;
+  width: 100%;
+  height: 193px;
+  background-color: #423c97;
+  border-radius: 16px 16px 0px 0px;
+}
+
+/*+++++++++++FOOTER++++++++++*/
+
+footer {
+  position: absolute;
+  width: 100%;
+  height: 51px;
+  left: 0px;
+  top: 972px;
+  background: #00669F;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+}
+
+footer p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFF9F9;
+  margin-left: 27px;
+}
+
