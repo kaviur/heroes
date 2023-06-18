@@ -1,0 +1,161 @@
+.form-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 60%;
+    height: auto;
+    top: 34px;
+    background: #00669F;
+    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.3);
+    border-radius: 49.0901px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    /* text-align: center; */
+    color: #FFFFFF;
+}
+
+.add-super-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.inputs-box{
+    display: flex;
+}
+
+.add-btn{
+    width: 366px;
+    height: 87px;
+    background: #1CD1B0;
+    border-radius: 23.011px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 44px;
+    text-align: center;
+    color: #000000;
+    border: none;
+}
+
+.add-btn:hover{
+    background-color: #001D2D;
+    color: #FFFFFF;
+}
+
+.info-form{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.info-form spam{
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 72px;
+}
+
+.info-form > p{
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 14px;
+}
+
+/* .left-inputs{
+    background-color: #b9e094;
+}
+
+.right-inputs{
+    background-color: #e649b7;
+} */
+
+.left-inputs, .right-inputs{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 5px;
+}
+
+.input-box{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.input-box label{
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom:.8rem;
+}
+
+select {
+    color: grey;
+    width: 100%;
+}
+
+select option {
+    color: black;
+}
+
+.custom-input, .custom-text-area {
+    background: #FFFFFF;
+    border: 1.53407px solid rgba(0, 0, 0, 0.1);
+    border-radius: 15.3407px;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 24px;
+    padding: 0 10px;
+}
+
+.custom-input-file{
+    width: 223px;
+    height: 32px;
+    background: #CECECE;
+    border-radius: 5px;
+}
+
+.custom-input{
+    height: 63px;
+}
+
+.custom-text-area{
+    padding-top: 20px;
+}
+
+.custom-date{
+    font-size: 13px; 
+}
+
+.custom-checkbox{
+    box-sizing: border-box;
+    width: 24px;
+    height: 20px;
+    border: 1px solid #C4C4C4;
+}
+
+.custom-radio-buttoms{
+    width: 20px;
+    height: 20px;
+    left: 735.54px;
+    border: 1px solid #C4C4C4;
+}
+
+/* .custom-checkbox:checked{
+    background-color: #be8282;
+    margin-left: 2%;
+    box-shadow: #00669F 30px;
+} */
+
+input[type="checkbox"]:checked {
+    margin-left: 2%;
+    background-image: url(../img/portada-harley.png)  no-repeat center center #4DD1FB;;
+}
+
+input[type="input"]:focus{
+    background: #e72525;
+}
