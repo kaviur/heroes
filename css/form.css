@@ -230,7 +230,7 @@ input::file-selector-button:hover{
 }
 
 #c4 input:checked~.checkmark {
-    background-color: blue;
+    background-color: rgb(0, 255, 221);
 }
 
 
@@ -263,11 +263,28 @@ input::file-selector-button:hover{
 }
 
 @media only screen and (max-width: 1200px){
-    /*Tablets [601px -> 1200px]*/
+    .inputs-container > div{
+        flex-direction: column!important;
+    }
+
+    .inputs-container > div > .input-box{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 800px){
+	.form-container{
+        width: 80%;
+    }
+    .add-btn{
+        width: 90%;
+    }
 }
 @media only screen and (max-width: 600px){
-	/*Big smartphones [426px -> 600px]*/
+    .form-container{
+        width: 90%;
+    }
 }
+/*
 @media only screen and (max-width: 425px){
-	/*Small smartphones [325px -> 425px]*/
-}
+} */
