@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heroes</title>
+    <link rel="icon" href="/img/pow.png"/>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
@@ -20,7 +21,8 @@
             <p>Nombre tienda</p>
         </a>
     </div>
-    <a class="linkToForm" href="/form.html">+</a>
+    <a class="linkToForm" href="/index.html">
+        <i class="fa-sharp fa-solid fa-arrow-left"></i>   </a>
     <main>
         <section class="form-container">   
             <div class="info-form">
@@ -28,23 +30,12 @@
                 <p>Agregá tu personaje favorito completando las opciones.</p>
             </div>
             <form class="add-super-form" action="" method="post">
-                <div class="inputs-box">
-                    <div class="left-inputs">
+                <div class="inputs-container">
+                    <div>
                         <div class="input-box">
                             <label for="name">*Nombre</label>
                             <input class="custom-input" type="text" name="name" id="name">
                         </div>
-                        <div class="input-box">
-                            <label for="fecha">Fecha</label>
-                            <input class="custom-input custom-date" type="date" name="fecha" id="fecha">
-                        </div>
-                        <div class="input-box">
-                            <label for="descripcion">
-                                <textarea class="custom-text-area" name="descripcion" id="descripcion" cols="15" rows="10" placeholder="Descripción"></textarea>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="right-inputs">
                         <div class="input-box">
                             <label for="especie">*Especie</label>
                             <select class="custom-input" name="especie" id="especie">
@@ -54,31 +45,45 @@
                                 <option value="maquina">Máquina</option>
                             </select>
                         </div>
+                    </div>
+                    <div>
+                        <div class="input-box">
+                            <label for="fecha">Fecha</label>
+                            <input class="custom-input custom-date" type="date" name="fecha" id="fecha">
+                        </div>
                         <div class="input-box">
                             <label for="foto">Agregar Foto</label>
                             <input class="custom-input-file" type="file" name="foto" id="foto">
                         </div>
+                    </div>
+                    <div>
                         <div class="input-box">
-                            <label for="">Poderes</label>
-                            <label for="poder1">
-                                <input class="custom-checkbox" type="checkbox" id="poder1" name="poderes">
-                                Volar
+                            <label for="descripcion">
+                                <textarea class="custom-text-area" name="descripcion" id="descripcion" cols="15" rows="12" placeholder="Descripción"></textarea>
                             </label>
-                            <label for="poder2">
-                                <input class="custom-checkbox" type="checkbox" id="poder2" name="poderes">
-                                Súper inteligencia
-                            </label>
-                            <label for="poder3">
-                                <input class="custom-checkbox" type="checkbox" id="poder3" name="poderes">
-                                Vista de rayo láser
-                            </label>
-                            <label for="poder4">
-                                <input class="custom-checkbox" type="checkbox" id="poder4" name="poderes">
-                                Billetera gorda
-                            </label> 
-                            <hr>                       
                         </div>
                         <div class="input-box">
+                            <label for="">Poderes</label>
+
+                            <label class="checkinput-container" id="c1">Volar
+                                <input type="checkbox" name="poderes">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="checkinput-container" id="c2">Súper inteligencia
+                                <input type="checkbox" name="poderes">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="checkinput-container" id="c3">Vista de rayo láser
+                                <input type="checkbox" name="poderes">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="checkinput-container" id="c4">Billetera gorda
+                                <input type="checkbox" name="poderes">
+                                <span class="checkmark"></span>
+                            </label>
+ 
+                            <hr><br> 
+                                                  
                             <label for="">Tipo de personaje</label>
                             <label for="bueno">
                                 <input class="custom-radio-buttoms" type="radio" name="tipo-personaje" id="bueno">

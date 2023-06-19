@@ -14,7 +14,6 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
-    /* text-align: center; */
     color: #FFFFFF;
 }
 
@@ -24,10 +23,6 @@
     align-items: center;
     width: 80%;
     margin-bottom: 20px;
-}
-
-.inputs-box{
-    display: flex;
 }
 
 .add-btn{
@@ -46,6 +41,7 @@
 .add-btn:hover{
     background-color: #001D2D;
     color: #FFFFFF;
+    transition: .7s;
 }
 
 .info-form{
@@ -65,25 +61,21 @@
     line-height: 14px;
 }
 
-/* .left-inputs{
-    background-color: #b9e094;
-}
-
-.right-inputs{
-    background-color: #e649b7;
-} */
-
-.left-inputs, .right-inputs{
+.inputs-container{
     display: flex;
     flex-direction: column;
-    width: 50%;
-    gap: 5px;
+    width: 90%;
 }
 
-.input-box{
+.inputs-container > div{
+    display: flex;
+}
+
+.inputs-container > div > .input-box{
     display: flex;
     flex-direction: column;
     padding: 10px;
+    width: 50%;
 }
 
 .input-box label{
@@ -91,6 +83,10 @@
     font-size: 20px;
     line-height: 24px;
     margin-bottom:.8rem;
+}
+
+.input-box > input, .input-box textarea{
+    outline: none;
 }
 
 select {
@@ -110,13 +106,23 @@ select option {
     font-size: 20px;
     line-height: 24px;
     padding: 0 10px;
+    width: 100%;
 }
 
-.custom-input-file{
-    width: 223px;
-    height: 32px;
+input::file-selector-button {
     background: #CECECE;
     border-radius: 5px;
+    height: 32px;
+    border: none;
+    min-width: 200px;
+    text-align: start;
+    padding-left: 9px;
+    margin-top: 5%;
+}
+
+input::file-selector-button:hover{
+    cursor: pointer;
+    opacity: 80%;
 }
 
 .custom-input{
@@ -125,18 +131,108 @@ select option {
 
 .custom-text-area{
     padding-top: 20px;
+    resize: none;
+}
+
+.custom-text-area:hover,
+.custom-input:hover{
+    border: 2px solid #00fffd;
+    box-shadow: 0 0 21px #00fffd;
+    transition: 1s all;
+}
+
+.custom-text-area:focus,
+.custom-input:focus{
+    animation: box-glow 1s ease-out infinite alternate;
+    border-color: #00fffc;
 }
 
 .custom-date{
     font-size: 13px; 
 }
 
-.custom-checkbox{
+/*
+==============================================
+======== CHECKBOX & RADIO BUTTONS ============
+==============================================
+*/
+
+.checkinput-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+  }
+
+  /* escondemos el default checkbox */
+.checkinput-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  /* creamos un custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
     box-sizing: border-box;
     width: 24px;
     height: 20px;
     border: 1px solid #C4C4C4;
+    background-color: #fff;
+  }
+
+  /* Al pasar el mouse encima, lo ponemos gris */
+.checkinput-container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+
+  /* creamos el marcador (escondido al no seleccionar) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  /* mostramos el marcador al seleccionar */
+.checkinput-container input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+/* estilo del marcador */
+.checkinput-container .checkmark:after {
+    left: 7px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
+
+  /* los checkboxes */
+#c1 input:checked~.checkmark {
+    background-color: rgb(243, 136, 35);
+}
+
+#c2 input:checked~.checkmark {
+    background-color: red;
+}
+
+#c3 input:checked~.checkmark {
+    background-color: green;
+}
+
+#c4 input:checked~.checkmark {
+    background-color: blue;
+}
+
 
 .custom-radio-buttoms{
     width: 20px;
@@ -145,17 +241,33 @@ select option {
     border: 1px solid #C4C4C4;
 }
 
-/* .custom-checkbox:checked{
-    background-color: #be8282;
-    margin-left: 2%;
-    box-shadow: #00669F 30px;
-} */
+.custom-radio-buttoms:checked{
+    margin-left: 1.5%;
+    transition: .7s;
+}
+/*
+===================================================
+================= MEDIA QUERIES ===================
+===================================================
+*/
 
-input[type="checkbox"]:checked {
-    margin-left: 2%;
-    background-image: url(../img/portada-harley.png)  no-repeat center center #4DD1FB;;
+@keyframes box-glow {
+    0% {
+      border-color: #00b8b6;
+      box-shadow: 0 0 5px rgba(0, 255, 253, 0.2), inset 0 0 5px rgba(0, 255, 253, 0.1), 0 2px 0 rgb(58, 86, 87); }
+  
+    100% {
+      border-color: #00fffc;
+      box-shadow: 0 0 20px rgba(0, 255, 253, 0.6), inset 0 0 10px rgba(0, 255, 253, 0.4), 0 2px 0 rgb(74, 121, 118); 
+    } 
 }
 
-input[type="input"]:focus{
-    background: #e72525;
+@media only screen and (max-width: 1200px){
+    /*Tablets [601px -> 1200px]*/
+}
+@media only screen and (max-width: 600px){
+	/*Big smartphones [426px -> 600px]*/
+}
+@media only screen and (max-width: 425px){
+	/*Small smartphones [325px -> 425px]*/
 }

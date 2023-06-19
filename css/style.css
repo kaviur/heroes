@@ -73,11 +73,15 @@ a.linkToForm{
   top:50%;
   right: 10px;
   z-index: 9;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 a.linkToForm:hover{
   background-color: #001D2D;
+  box-shadow: 0 0 19px #364141;
+  transition: .5s;
 }
 
 /*+++++++++MAIN++++++++++++++*/
