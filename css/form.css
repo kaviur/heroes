@@ -102,11 +102,26 @@
 select {
     color: grey;
     width: 100%;
+    border: none;
 }
 
 select option {
-    color: black;
+    color: #185170;
 }
+  
+  /* Selector para el elemento de opción seleccionado */
+select option:checked {
+    color: #16384b;
+    background-color: #c7cbcc;
+}  
+
+select option:disabled {
+    color: #b0b2b3;
+}  
+
+select:focus {
+    outline: none;
+} 
 
 .custom-input, .custom-text-area {
     background: #FFFFFF;
